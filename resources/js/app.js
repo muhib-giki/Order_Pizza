@@ -1,5 +1,6 @@
 import axios from "axios";
 import Noty from "noty";
+import { initAdmin } from "./admin";
 const { update } = require("../../app/models/menu");
 
 let addToCart = document.querySelectorAll(".add-to-cart");
@@ -34,3 +35,12 @@ addToCart.forEach((btn) => {
     updateCart(pizza);
   });
 });
+
+//remove alert message after 1sec
+const alertMsg = document.querySelector("#success-alert");
+if (alertMsg) {
+  setTimeout(() => {
+    alertMsg.remove();
+  }, 1000);
+}
+initAdmin();
