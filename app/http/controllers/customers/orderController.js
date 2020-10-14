@@ -39,6 +39,7 @@ function orderController() {
       );
       res.render("customers/orders", { orders: orders, moment: moment });
     },
+    show(req, res) {},
   };
 }
 module.exports = orderController;
